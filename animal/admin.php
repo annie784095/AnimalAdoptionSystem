@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="zh-TW" dir="ltr">
 	<head>
 		<meta charset = "utf-8">
-		<title>首頁--動物認養系統</title>
+		<title>管理頁面--動物認養系統</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-		</script>
+		<link rel="stylesheet" type="text/css" href="css/admin.css">
 	</head>
 	<body>
 		<div class="header">
@@ -56,16 +52,14 @@
 		  </form>
 		</div>
 		
-		<div id="navbar" class="navbar">
-		  <a class="active" href="#" name="index_content.php">首頁</a>
-		  <a href="#" name="person_adoption.php">個人認養</a>
-		  <a href="#" name="mechanism_adoption.php">機構認養</a>
-		  <a href="#">遺失協尋</a>
-		  <a href="#">二手用品</a>
-		</div>
-
-		<div id="content">
-			<iframe src="index_content.php"></iframe>
+		<div class="context">
+			<div class="title">管理系統</div>
+			<p>hi,<?php echo $_SESSION['user_name']?>管理員</p>
+			<button type="button" onclick="location.href='index.php'">首頁</button>
+			<button type="button" onclick="location.href='new_announcement_info.php'">新增公告</button>			
+			<button type="button" onclick="location.href='admin_user.php'">會員管理</button>
+			<button type="button" onclick="location.href='admin_pet.php'">動物管理</button>
+			<button type="button"></button>
 		</div>
 		
 		<script>
@@ -91,6 +85,5 @@
 		});
 		
 		</script>
-		
 	</body>
 </html>

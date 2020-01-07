@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 //imgur API新增圖片之url
 $img=$_FILES['img'];
 if($img['name']=='')

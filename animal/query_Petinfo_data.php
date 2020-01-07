@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $manager = new MongoDB\Driver\Manager("mongodb+srv://maomao:maomao123@animal-axwfm.gcp.mongodb.net/test?retryWrites=true&w=majority");//設定連線
 $mongoid=$_GET['_id'];
 $filter = ['_id' => ['$eq' => new MongoDB\BSON\ObjectId("$mongoid")]];//查詢條件

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 $manager = new MongoDB\Driver\Manager("mongodb+srv://maomao:maomao123@animal-axwfm.gcp.mongodb.net/test?retryWrites=true&w=majority");//設定連線
 $filter = ['account' => ['$eq' => $_SESSION['account']]];//查詢條件

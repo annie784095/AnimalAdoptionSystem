@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 $manager = new MongoDB\Driver\Manager("mongodb+srv://maomao:maomao123@animal-axwfm.gcp.mongodb.net/test?retryWrites=true&w=majority");//設定連線
 $bulk = new MongoDB\Driver\BulkWrite; //設定寫入變數
@@ -13,7 +13,8 @@ $bulk->insert(['user_name' => $_POST['user_name'],//使用者登陸後儲存使�
 			   'account' => $_POST['account'],
 			   'psd' => $_POST['psd'],
 			   'address' => $_POST['address'],
-			   'phone' => $_POST['phone']
+			   'phone' => $_POST['phone'],
+			   'admin' => "False",
 			   ]);
 $manager->executeBulkWrite('mydb.Userinfo', $bulk);//$manager->executeBulkWrite('寫入db.寫入資料表', $前面設的寫入變數);
 
